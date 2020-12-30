@@ -43,7 +43,7 @@
 	<form:errors path="jobId" cssClass="error" htmlEscape="false"/><br> <!-- 에러메시지 -->
 <!-- 	체크박스 -->
 	<form:checkboxes path="departmentId"
-					  items="${depts }"
+					  items="${depts}"
 					  itemLabel="departmentName"
 					  itemValue="departmentId" cssClass="springfromcheck"/><br><br>
 <!-- 	라디오 -->

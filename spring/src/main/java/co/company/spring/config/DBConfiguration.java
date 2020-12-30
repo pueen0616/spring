@@ -9,10 +9,10 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@EnableTransactionManagement
+@EnableTransactionManagement //트랜잭션 관련 자동 추가
 @ComponentScan(basePackages="co.company") //자동 스캔
 public class DBConfiguration {
-	  
+	
 	//데이터소스 등록
 	@Bean(destroyMethod="close")
 	public BasicDataSource dataSource() {

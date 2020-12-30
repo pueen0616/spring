@@ -4,6 +4,7 @@ import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.ViewResolver;
@@ -21,7 +22,8 @@ import co.company.spring.controller.Greeter;
 
 @Configuration
 @ComponentScan(basePackages="co.company")
-@EnableWebMvc //(어노테이션-드라이븐) 
+@EnableWebMvc //(어노테이션-드라이븐)
+@EnableAspectJAutoProxy(proxyTargetClass = true) //어노테이션 before, after 이런거 자동으로 다 설정
 public class MvcConfiguration implements WebMvcConfigurer{
 	
 	/**
